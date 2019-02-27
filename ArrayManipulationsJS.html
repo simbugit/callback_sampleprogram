@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+var a = [1,2,3,9,5,7,3,4,5,6,7,8,8,9,9,10,12,34,45,567]
+var b = [4,5,6,7,8]
+var c=[];
+var k=0;
+
+//Concatinting Array a with Array b
+
+for (var i=0; i<b.length; i++) {
+  if (a.indexOf(b[i])<0) {  // element doesn't exist inside 'a' array
+    a.push(b[i])
+    console.log(b[i]);
+  }
+}
+
+// Sort the  Array a
+for (var i = 1; i < a.length; i++) {
+
+      if (a[i] > a[i - 1]) {
+        a[i] = a[i] + a[i - 1];
+        a[i - 1] = a[i] - a[i - 1];
+        a[i] = a[i] - a[i - 1];
+        i = 0;
+      }
+ 
+    }
+
+
+// Remvoing Duplicates from Result Array c
+for(var i=0;i<a.length;i++)
+{
+if(a[i]!=a[i+1])
+{
+c.push(a[i]);
+
+}
+}
+
+
+// Printing Result Array
+for(var j=0;j<c.length;j++)
+{
+console.log(c[j]);
+}
+
+
+</script>
+
+</body>
+</html>
